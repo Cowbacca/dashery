@@ -1,18 +1,44 @@
 $(document).ready(function () {
-    $('#tokenfield')
-        .on('tokenfield:createtoken', function (e) {
-            e.attrs.label = e.attrs.value;
-        })
-        .tokenfield({
-            autocomplete: {
-                source: [
-                    {label: 'Material: Wool', value: 'wool'},
-                    {label: 'Colour: Blue', value: 'blue'},
-                    {label: 'Category: Jacket', value: 'jacket'},
-                    {label: 'Made in: England', value: 'made in England'}
-                ],
-                delay: 100
+    var engine = new Bloodhound({
+        local: [
+            {
+                category: 'Colour',
+                value: 'blue',
             },
-            showAutocompleteOnFocus: true
-        })
+            {
+                category: 'Type',
+                value: 'jacket',
+            },
+            {
+                category: 'Material',
+                value: 'wool',
+            },
+            {
+                category: 'Origin',
+                value: 'Made in England',
+            },
+        ],
+        datumTokenizer: Bloodhound.tokenizers.obj.whitespace('value'),
+        queryTokenizer: Bloodhound.tokenizers.whitespace,
+    });
+
+    engine.initialize();
+
+    $('#tokenfield').tokenfield({
+        typeahead: [null,
+            {
+                source: engine.ttAdapter(),
+                name: 'clothes',
+                display: 'value',
+                templates: {
+                    empty: [
+                        '<div class="empty-message">',
+                        'unable to find any clothes things that match the current query',
+                        '</div>'
+                    ].join('\n'),
+                    suggestion: Handlebars.compile('<div>{{category}}: {{value}}</div>')
+                },
+            }
+        ]
+    });
 });
