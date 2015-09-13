@@ -31,11 +31,6 @@ $(document).ready(function () {
                 name: 'clothes',
                 display: 'value',
                 templates: {
-                    empty: [
-                        '<div class="empty-message">',
-                        'unable to find any clothes things that match the current query',
-                        '</div>'
-                    ].join('\n'),
                     suggestion: Handlebars.compile('<div>{{category}}: {{value}}</div>')
                 },
             }

@@ -28,8 +28,3 @@
     -moz-background-clip: padding;
     background-clip: padding-box;
 }
-
-#tokenfield .empty-message {
-    padding: 5px 10px;
-    text-align: center;
-}
