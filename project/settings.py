@@ -38,7 +38,6 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'clothessearch',
-    'djangobower',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -114,6 +113,7 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, '../clothessearch/static'),
+    os.path.join(BASE_DIR, 'bower_components'),
 )
 
 # Simplified static file serving.
@@ -121,18 +121,3 @@ STATICFILES_DIRS = (
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 WHITENOISE_USE_FINDERS = True
-
-STATICFILES_FINDERS = (
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    'djangobower.finders.BowerFinder'
-)
-
-BOWER_COMPONENTS_ROOT = os.path.join(BASE_DIR, 'components')
-
-BOWER_INSTALLED_APPS = (
-    'jquery#2.1.4',
-    'bootstrap#3.3.5',
-    'bootstrap-tokenfield#0.12.1',
-    'jquery-ui#1.11.4'
-)

@@ -6,13 +6,13 @@
     "Angus Goldsmith <angus.j.goldsmith@gmail.com>"
   ],
   "description": "Intuitive clothes search.",
-  "keywords": [
-    "clothes",
-    "search",
-    "dashery",
-    "made"
-  ],
+  "dependencies": {
+    "bootstrap": "~3.3.5",
+    "bootstrap-tokenfield": "~0.12.1",
+    "jquery": "~2.1.4",
+    "jquery-ui": "~1.11.4"
+  },
   "resolutions": {
-    "bootstrap": "3.3.5"
+    "bootstrap": "~3.3.5"
   }
 }
