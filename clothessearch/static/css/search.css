@@ -90,6 +90,6 @@ body {
     margin-bottom: 0px;
 }
 
-.container-fluid {
-    padding: 0px;
+#wrap {
+    width: 100%;
 }
