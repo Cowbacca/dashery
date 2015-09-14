@@ -24,7 +24,7 @@ $(document).ready(function () {
 
     engine.initialize();
 
-    $('#tokenfield').tokenfield({
+    $('.tokenfield-search').tokenfield({
         typeahead: [null,
             {
                 source: engine.ttAdapter(),

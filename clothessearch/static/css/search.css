@@ -1,28 +1,27 @@
-body{
+body {
     font-family: 'Noto Sans', sans-serif;
 }
 
-.top {
-    padding-top: 9em;
-}
-
-.dashery, .dashery-small {
-    font-family: 'Batang', serif;
+.dashery {
+    font-family: 'Merriweather', serif;
     font-weight: 500;
-}
-
-.dashery-small {
-    font-size: 300%;
-    margin-bottom: 0px;
 }
 
 .logo {
     font-size: 500%;
 }
 
-.search {
-    padding-top: 1em;
-    margin-bottom: 0.3em;
+#search {
+    margin-top: 3em;
+    margin-bottom: 6em;
+}
+
+#search-header {
+    margin-bottom: 1em;
+}
+
+#search-information {
+    margin-top: 4em;
 }
 
 .search-top {
@@ -47,24 +46,39 @@ body{
     background-clip: padding-box;
 }
 
-.myrow {
-    font-size: 0;
-}
-
-.myrow > * {
-    float: none;
-    display: inline-block;
-    font-size: 14px; /* if using LESS it's quicker to just use @font-size-base */
-}
-
-.myrow > *:last-child {
-    vertical-align: bottom;
-}
-
-.myrow p:last-child {
-    margin-bottom: 0; /* optional */
-}
-
 .col-result {
     padding: 1em;
+}
+
+.strike {
+    display: block;
+    text-align: center;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 1em;
+}
+
+.strike > span {
+    position: relative;
+    display: inline-block;
+}
+
+.strike > span:before,
+.strike > span:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 9999px;
+    height: 1px;
+    background: grey;
+}
+
+.strike > span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+
+.strike > span:after {
+    left: 100%;
+    margin-left: 15px;
 }
