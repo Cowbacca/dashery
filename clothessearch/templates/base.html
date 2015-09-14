@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <title>Dashery</title>
+    <link rel="stylesheet" href="{% static 'bootstrap/dist/css/bootstrap.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap-tokenfield/dist/css/tokenfield-typeahead.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'bootstrap-tokenfield/dist/css/bootstrap-tokenfield.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/search.css' %}"/>
+    <link href='https://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+</head>
+<body>
+{% block content %}
+{% endblock %}
+<script type="text/javascript" src='{% static 'jquery/dist/jquery.min.js' %}'></script>
+<script type="text/javascript" src='{% static 'bootstrap/dist/js/bootstrap.min.js' %}'></script>
+<script type="text/javascript" src='{% static 'bootstrap-tokenfield/dist/bootstrap-tokenfield.min.js' %}'></script>
+<script type="text/javascript" src='{% static 'typeahead.js/dist/typeahead.bundle.min.js' %}'></script>
+<script type="text/javascript" src='{% static 'handlebars/handlebars.min.js' %}'></script>
+<script type="text/javascript" src='{% static 'js/search.js' %}'></script>
+</body>
+</html>
