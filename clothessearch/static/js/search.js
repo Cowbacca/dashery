@@ -36,7 +36,7 @@ $(document).ready(function () {
             }
         ]
     }).parent().on('keydown', this, function (event) {
-        if (event.keyCode == 13) {
+        if (event.ctrlKey && event.keyCode == 13) {
            search();
         }
     });
