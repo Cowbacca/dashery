@@ -1,9 +1,14 @@
+body{
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .top {
     padding-top: 9em;
 }
 
 .dashery, .dashery-small {
     font-family: 'Batang', serif;
+    font-weight: 500;
 }
 
 .dashery-small {
@@ -58,4 +63,8 @@
 
 .myrow p:last-child {
     margin-bottom: 0; /* optional */
+}
+
+.col-result {
+    padding: 1em;
 }
