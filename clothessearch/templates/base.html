@@ -14,7 +14,8 @@
     <link href='https://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<nav class="navbar navbar-default">
+<div class="container-fluid">
+    <nav class="navbar navbar-default">
         <div class="container">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -38,8 +39,9 @@
             </div>
         </div>
     </nav>
-{% block content %}
-{% endblock %}
+    {% block content %}
+    {% endblock %}
+</div>
 <script type="text/javascript" src='{% static 'jquery/dist/jquery.min.js' %}'></script>
 <script type="text/javascript" src='{% static 'bootstrap/dist/js/bootstrap.min.js' %}'></script>
 <script type="text/javascript" src='{% static 'bootstrap-tokenfield/dist/bootstrap-tokenfield.min.js' %}'></script>

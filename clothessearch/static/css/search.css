@@ -12,8 +12,11 @@ body {
 }
 
 #search {
-    margin-top: 3em;
-    margin-bottom: 6em;
+    padding-top: 7em;
+    padding-bottom: 11em;
+    margin-bottom: 1em;
+    color: white;
+    background-color: rosybrown;
 }
 
 #search-header {
@@ -81,4 +84,12 @@ body {
 .strike > span:after {
     left: 100%;
     margin-left: 15px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+}
+
+.container-fluid {
+    padding: 0px;
 }

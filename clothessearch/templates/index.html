@@ -1,39 +1,45 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
-    <div class="container">
         <div id="search">
-            <div id="search-header" class="row text-center">
-                <h1 class="dashery">Intuitive Clothing Search</h1>
-            </div>
-            <div class="row">
-                <div class="tokenfield col-md-8 col-md-offset-2">
-                    <div class="input-group">
-                        <input type="text" class="form-input tokenfield-search"/>
+            <div class="container">
+                <div id="search-header" class="row text-center">
+                    <h1 class="dashery">Intuitive Clothing Search</h1>
+                </div>
+                <div class="row">
+                    <div class="tokenfield col-md-8 col-md-offset-2">
+                        <div class="input-group">
+                            <input type="text" class="form-input tokenfield-search"/>
                 <span class="input-group-btn">
                     <button class="btn btn-default" type="button" onclick="search()">Go!</button>
                 </span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="row text-center" id="search-information">
-                <div class="col-md-4">
-                    <h2>Token Based Searching</h2>
-                    <p>Simply type what you are looking for and autocomplete will do the rest!</p>
-                </div>
-                <div class="col-md-4">
-                    <h2>Immediate Results</h2>
-                    <p>All results will match your specific desires, so no need to go trawling through pages of Google results.</p>
-                </div>
-                <div class="col-md-4">
-                    <h2>High Quality Clothing</h2>
-                    <p>Quality garments from the likes of Drake's, Pantherella, and Marwood.</p>
+                <div class="row text-center" id="search-information">
+                    <div class="col-md-4">
+                        <h2>Token Based Searching</h2>
+
+                        <p>Simply type what you are looking for and autocomplete will do the rest!</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>Immediate Results</h2>
+
+                        <p>All results will match your specific desires, so no need to go trawling through pages of
+                            Google
+                            results.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h2>High Quality Clothing</h2>
+
+                        <p>Quality garments from the likes of Drake's, Pantherella, and Marwood.</p>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-        <div id="featured">
+        <div class="container" id="featured">
             <div class="row text-center strike">
                 <span>FEATURED</span>
             </div>
@@ -106,5 +112,4 @@
                 </a>
             </div>
         </div>
-    </div>
 {% endblock %}
