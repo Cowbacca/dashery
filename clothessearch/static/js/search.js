@@ -35,5 +35,13 @@ $(document).ready(function () {
                 },
             }
         ]
+    }).parent().on('keydown', this, function (event) {
+        if (event.keyCode == 13) {
+           search();
+        }
     });
 });
+
+function search() {
+    window.location.pathname='results';
+}

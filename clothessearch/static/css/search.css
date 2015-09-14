@@ -2,13 +2,26 @@
     padding-top: 9em;
 }
 
-.dashery {
+.dashery, .dashery-small {
     font-family: 'Batang', serif;
+}
+
+.dashery-small {
+    font-size: 300%;
+    margin-bottom: 0px;
+}
+
+.logo {
     font-size: 500%;
 }
 
 .search {
     padding-top: 1em;
+    margin-bottom: 0.3em;
+}
+
+.search-top {
+    margin-bottom: 0.3em;
 }
 
 .tt-open {
@@ -27,4 +40,22 @@
     -webkit-background-clip: padding-box;
     -moz-background-clip: padding;
     background-clip: padding-box;
+}
+
+.myrow {
+    font-size: 0;
+}
+
+.myrow > * {
+    float: none;
+    display: inline-block;
+    font-size: 14px; /* if using LESS it's quicker to just use @font-size-base */
+}
+
+.myrow > *:last-child {
+    vertical-align: bottom;
+}
+
+.myrow p:last-child {
+    margin-bottom: 0; /* optional */
 }
