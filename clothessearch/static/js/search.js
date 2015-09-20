@@ -3,11 +3,11 @@ $(document).ready(function () {
         local: [
             {
                 category: 'Colour',
-                value: 'blue',
+                value: 'grey',
             },
             {
                 category: 'Type',
-                value: 'jacket',
+                value: 'trousers',
             },
             {
                 category: 'Material',
