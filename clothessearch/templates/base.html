@@ -28,14 +28,8 @@
                 <a class="navbar-brand dashery" href="{% url 'home' %}">Dashery</a>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <div class="navbar-form navbar-left tokenfield">
-                    <div class="input-group">
-                        <input type="text" class="form-input tokenfield-search"/>
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button" onclick="search()">Go!</button>
-                </span>
-                    </div>
-                </div>
+                {% block navbar %}
+                {% endblock %}
             </div>
         </div>
     </nav>

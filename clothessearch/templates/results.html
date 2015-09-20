@@ -1,8 +1,20 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block navbar %}
+    <div class="navbar-form navbar-left tokenfield">
+        <div class="input-group">
+            <input type="text" class="form-input tokenfield-search" value="grey,wool,trousers,Made in England"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" onclick="search()">Go!</button>
+                </span>
+        </div>
+    </div>
+{% endblock %}
+
 {% block content %}
     <div class="container">
-        <div class="row">Sort by: <a href="#price-sort" onclick="sortResults()">price <span class="glyphicon glyphicon-sort" aria-hidden="true"></span></a></div>
+        <div class="row">Sort by: <a href="#price-sort" onclick="sortResults()">price <span
+                class="glyphicon glyphicon-sort" aria-hidden="true"></span></a></div>
         <div id="results" class="row text-center">
             <div class="col-md-4 col-result" data-price="325">
                 <a href="http://www.themerchantfox.co.uk/prod/314/trousers/classic-mid-grey-fox-flannel-trousers">
