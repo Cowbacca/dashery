@@ -2,81 +2,79 @@
 {% load static %}
 {% block content %}
     <div class="container">
-        <div class="row text-center">
-            <a href="http://www.themerchantfox.co.uk/prod/314/trousers/classic-mid-grey-fox-flannel-trousers">
-                <div class="col-md-4 col-result">
-                    <img src="{% static 'img/actual_merchant_fox.jpg' %}" class="img-responsive img-result center-block"/>
+        <div class="row">Sort by: <a href="#price-sort" onclick="sortResults()">price <span class="glyphicon glyphicon-sort" aria-hidden="true"></span></a></div>
+        <div id="results" class="row text-center">
+            <div class="col-md-4 col-result" data-price="325">
+                <a href="http://www.themerchantfox.co.uk/prod/314/trousers/classic-mid-grey-fox-flannel-trousers">
+                    <img src="{% static 'img/actual_merchant_fox.jpg' %}"
+                         class="img-responsive img-result center-block"/>
                     <span><strong>Merchant Fox</strong></span>
                     <br/>
                     <span>Classic Mid Grey Fox Flannel Trousers</span>
                     <br/>
                     <span>£325</span>
-                </div>
-            </a>
-            <a href="http://www.barringtonayre.co.uk/luxury-fox-flannel/">
-                <div class="col-md-4 col-result">
+                </a>
+            </div>
+            <div class="col-md-4 col-result" data-price="295">
+                <a href="http://www.barringtonayre.co.uk/luxury-fox-flannel/">
                     <img src="{% static 'img/barrington.png' %}" class="img-responsive img-result center-block"/>
                     <span><strong>Barrington Ayre</strong></span>
                     <br/>
                     <span>Luxury Fox Flannel</span>
                     <br/>
                     <span>£295</span>
-                </div>
-            </a>
-            <a href="http://www.crombie.co.uk/mens/the-alexander-charcoal-flannel-wool-formal-trousers-with-side-adjusters.html">
-                <div class="col-md-4 col-result">
+                </a>
+            </div>
+            <div class="col-md-4 col-result" data-price="195">
+                <a href="http://www.crombie.co.uk/mens/the-alexander-charcoal-flannel-wool-formal-trousers-with-side-adjusters.html">
                     <img src="{% static 'img/crombie.jpg' %}" class="img-responsive img-result center-block"/>
                     <span><strong>Crombie</strong></span>
                     <br/>
                     <span>The Alexander, Charcoal Flannel Wool Formal Trousers</span>
                     <br/>
                     <span>£195</span>
-                </div>
-            </a>
-        </div>
-        <div class="row text-center">
-            <a href="http://www.realmandempire.com/collections/bottoms/products/slim-leg-wool-officer-trousers-grey-re0219">
-                <div class="col-md-4 col-result">
+                </a>
+            </div>
+            <div class="col-md-4 col-result" data-price="125">
+                <a href="http://www.realmandempire.com/collections/bottoms/products/slim-leg-wool-officer-trousers-grey-re0219">
                     <img src="{% static 'img/realm_and_empire.jpg' %}" class="img-responsive img-result center-block"/>
                     <span><strong>Realm & Empire</strong></span>
                     <br/>
                     <span>Slim-Leg Wool Officer Trousers | Grey (RE0219)</span>
                     <br/>
                     <span>£125</span>
-                </div>
-            </a>
-            <a href="http://www.sehkelly.com/shop/trousers/charcoal-grey-wool-tweed-proper-trousers/">
-                <div class="col-md-4 col-result">
+                </a>
+            </div>
+            <div class="col-md-4 col-result" data-price="160">
+                <a href="http://www.sehkelly.com/shop/trousers/charcoal-grey-wool-tweed-proper-trousers/">
                     <img src="{% static 'img/seh_kelly.jpg' %}" class="img-responsive img-result center-block"/>
                     <span><strong>SEH Kelly</strong></span>
                     <br/>
                     <span>Charcoal-grey wool-tweed proper trousers</span>
                     <br/>
                     <span>£160</span>
-                </div>
-            </a>
-             <a href="http://www.aeroleatherclothing.com/product-detail.php?id=680">
-                <div class="col-md-4 col-result">
+                </a>
+            </div>
+            <div class="col-md-4 col-result" data-price="175">
+                <a href="http://www.aeroleatherclothing.com/product-detail.php?id=680">
                     <img src="{% static 'img/aero.jpg' %}" class="img-responsive img-result center-block"/>
                     <span><strong>Aero Leather</strong></span>
                     <br/>
                     <span>Harris Tweed Trousers Grey Herringbone </span>
                     <br/>
                     <span>£175</span>
-                </div>
-            </a>
-        </div>
-     <div class="row text-center">
-            <a href="http://www.old-town.co.uk/collections/product/products/vauxhalls">
-                <div class="col-md-4 col-result">
+                </a>
+            </div>
+            <div class="col-md-4 col-result" data-price="150">
+                <a href="http://www.old-town.co.uk/collections/product/products/vauxhalls">
                     <img src="{% static 'img/old_town.jpg' %}" class="img-responsive img-result center-block"/>
                     <span><strong>Old Town</strong></span>
                     <br/>
                     <span>Vauxhalls</span>
                     <br/>
                     <span>£150</span>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
     </div>
 {% endblock %}

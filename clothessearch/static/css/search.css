@@ -97,3 +97,11 @@ body {
 .img-result {
     max-height: 25em;
 }
+
+#results > .col-md-4:nth-child(3n+1) {
+    clear: both;
+}
+
+a:hover {
+    text-decoration: none;
+}

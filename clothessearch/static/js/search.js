@@ -1,4 +1,4 @@
-$(document).ready(function () {
+function initSearchTokenfield() {
     var engine = new Bloodhound({
         local: [
             {
@@ -37,11 +37,32 @@ $(document).ready(function () {
         ]
     }).parent().on('keydown', this, function (event) {
         if (event.ctrlKey && event.keyCode == 13) {
-           search();
+            search();
         }
     });
+}
+function sortResults() {
+    var results = $('.col-result');
+    results.sort(function (a, b) {
+        return $(a).data("price") - $(b).data("price");
+    });
+
+    if (sorted) {
+        results = results.get().reverse();
+    }
+
+    $('#results').html(results);
+
+    sorted = !sorted;
+
+}
+var sorted;
+
+$(document).ready(function () {
+    initSearchTokenfield.call(this);
+    sorted = false;
 });
 
 function search() {
-    window.location.pathname='results';
+    window.location.pathname = 'results';
 }
