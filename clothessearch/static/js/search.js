@@ -41,11 +41,22 @@ function initSearchTokenfield() {
         }
     });
 }
-function sortResults() {
-    var results = $('.col-result');
-    results.sort(function (a, b) {
-        return $(a).data("price") - $(b).data("price");
-    });
+function sortNumericalResults(attribute) {
+    sortResults(attribute, function (a, b) {
+        return $(a).data(attribute) - $(b).data(attribute);
+    })
+
+}
+
+function sortAlphabeticalResults(attribute) {
+    sortResults(attribute, function(a, b) {
+        return $(a).data(attribute) > $(b).data(attribute);
+    })
+}
+
+function sortResults(attribute, sortFunction) {
+  var results = $('.col-result');
+    results.sort(sortFunction);
 
     if (sorted) {
         results = results.get().reverse();
@@ -54,7 +65,6 @@ function sortResults() {
     $('#results').html(results);
 
     sorted = !sorted;
-
 }
 var sorted;
 
